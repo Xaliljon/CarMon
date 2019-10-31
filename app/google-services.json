@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1065324080741",
+    "firebase_url": "https://zaapravka-f61c1.firebaseio.com",
+    "project_id": "zaapravka-f61c1",
+    "storage_bucket": "zaapravka-f61c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065324080741:android:30b6c5d865928fb80fe08c",
+        "android_client_info": {
+          "package_name": "com.example.carmonitor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1065324080741-t71c7drmo42pu1fdlcbsso1bv6gnfatu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.carmonitor",
+            "certificate_hash": "8287d810c99509b634aa37a5b59332484f34988c"
+          }
+        },
+        {
+          "client_id": "1065324080741-ktnsp4okmsim2p7lerj0a60ed56s439d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyD1hxzlq11QEQyajKTRFgdMrmEYx2Tn8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1065324080741-ktnsp4okmsim2p7lerj0a60ed56s439d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
