@@ -1,125 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/bg"
-    android:padding="40dp"
-    tools:context=".RegisterPage"
-    android:layout_height="match_parent">
+    android:orientation="vertical"
+    tools:context=".RegisterPage">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_marginTop="140dp"
-        android:layout_width="match_parent"
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:focusable="true"
+        android:orientation="vertical"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.215">
 
-        android:focusableInTouchMode="true"
-
-        android:textColorHint="#F3F3F7">
-
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:id="@+id/edit_fullname"
-            android:textSize="26sp"
-            android:hint="Full name" />
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-    android:layout_marginTop="20dp"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:focusable="true"
-    android:focusableInTouchMode="true"
-    android:textColorHint="#F3F3F7">
+            android:layout_marginTop="140dp"
+            android:focusable="true"
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:id="@+id/edit_phone"
-        android:inputType="phone"
-        android:textSize="26sp"
-        android:hint="Phone number" />
-</com.google.android.material.textfield.TextInputLayout>
+            android:focusableInTouchMode="true"
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
+            android:textColorHint="#F3F3F7">
 
-        android:textColorHint="#F3F3F7">
+            <EditText
+                android:id="@+id/edit_fullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Full name"
+                android:textSize="26sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:id="@+id/edit_password"
-            android:inputType="textPassword"
-            android:textSize="26sp"
-            android:hint="Password" />
+            android:layout_marginTop="20dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
 
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
+            android:textColorHint="#F3F3F7">
 
-        android:textColorHint="#F3F3F7">
+            <EditText
+                android:id="@+id/edit_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textSize="26sp" />
 
-        <EditText
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:id="@+id/reset_pass"
-            android:inputType="textPassword"
-            android:textSize="26sp"
-            android:hint="Reset Password" />
+            android:layout_marginTop="20dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
 
-    </com.google.android.material.textfield.TextInputLayout>
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="15dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="22sp"
-            android:text="Gender:"
-            android:layout_marginRight="30dp"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Male"
-            android:textSize="22sp"
-            android:layout_marginRight="10dp"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Female"
-            android:textSize="22sp"/>
+            android:textColorHint="#F3F3F7">
 
-    </RadioGroup>
+            <EditText
+                android:id="@+id/reset_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:textSize="26sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:text="Gender:"
+                android:textSize="22sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Male"
+                android:textSize="22sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textSize="22sp" />
+
+        </RadioGroup>
+
+    </LinearLayout>
 
     <Button
-    android:id="@+id/btn_next"
-    android:layout_width="290dp"
-    android:layout_height="60dp"
-    android:layout_marginTop="22dp"
-    android:clickable="true"
-    android:text="NEXT"
-    android:textColor="#0A0224"
-    android:textSize="24sp"
-    android:textStyle="bold"
-    android:background="@drawable/riple"
-    android:typeface="normal"
-    android:layout_marginLeft="25dp"
-    android:gravity="center"
-    android:focusable="true" />
-</LinearLayout>
+        android:id="@+id/btn_next"
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_ui"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="NEXT"
+        android:textColor="#0A0224"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

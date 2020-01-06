@@ -1,4 +1,4 @@
-package com.example.carmonitor;
+package com.example.carmonitor.Fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,11 +11,11 @@ import androidx.fragment.app.Fragment;
 
 import com.example.carmonitor.R;
 
-public class MapFragment extends Fragment {
-    public static final String TAG ="MapFragment";
+public class ProfileFragment extends Fragment {
+    public static final String TAG="ProfileFragment";
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_map,container,false);
+        return inflater.inflate(R.layout.fragment_profile,container,false);
     }
 }

@@ -21,22 +21,23 @@ import com.rengwuxian.materialedittext.MaterialEditText;
 public class LoginPage extends AppCompatActivity {
     EditText editPhone, editPassword;
     Button btnLogIn;
+
     @Override
-    protected void onCreate( Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.enter_page);
 
-        editPhone=findViewById(R.id.edtphone);
-        editPassword=findViewById(R.id.edtpassword);
-        btnLogIn=findViewById(R.id.btn_enter);
+        editPhone = findViewById(R.id.edtphone);
+        editPassword = findViewById(R.id.edtpassword);
+        btnLogIn = findViewById(R.id.btn_enter);
 
-        final FirebaseDatabase database=FirebaseDatabase.getInstance();
-        final DatabaseReference table_user=database.getReference("User");
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference table_user = database.getReference("User");
 
         btnLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final ProgressDialog mDialog=new ProgressDialog(LoginPage.this);
+                final ProgressDialog mDialog = new ProgressDialog(LoginPage.this);
                 mDialog.setMessage("Please waiting...");
                 mDialog.show();
                 table_user.addValueEventListener(new ValueEventListener() {
@@ -46,18 +47,16 @@ public class LoginPage extends AppCompatActivity {
                             mDialog.dismiss();
                             User user = dataSnapshot.child(editPhone.getText().toString()).getValue(User.class);
                             if (user.getPassword().equals(editPassword.getText().toString())) {
-                                Intent intent=new Intent(LoginPage.this, MainScreen.class);
+                                Intent intent = new Intent(LoginPage.this, MainScreen.class);
                                 startActivity(intent);
                             } else {
                                 Toast.makeText(LoginPage.this, "Wrong password !!!", Toast.LENGTH_SHORT).show();
                                 mDialog.dismiss();
                             }
+                        } else {
+                            Toast.makeText(LoginPage.this, "User not exist in Database", Toast.LENGTH_SHORT).show();
+                            mDialog.dismiss();
                         }
-                        else
-                            {
-                                Toast.makeText(LoginPage.this, "User not exist in Database", Toast.LENGTH_SHORT).show();
-                                mDialog.dismiss();
-                            }
                     }
 
                     @Override
