@@ -21,6 +21,7 @@ import com.rengwuxian.materialedittext.MaterialEditText;
 public class LoginPage extends AppCompatActivity {
     EditText editPhone, editPassword;
     Button btnLogIn;
+    ProgressDialog mDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +38,17 @@ public class LoginPage extends AppCompatActivity {
         btnLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final ProgressDialog mDialog = new ProgressDialog(LoginPage.this);
-                mDialog.setMessage("Please waiting...");
+                mDialog = new ProgressDialog(LoginPage.this);
+                //Show dialog
+
                 mDialog.show();
+                //Set Content View
+
+                mDialog.setContentView(R.layout.progress_dialog);
+                //Set transparent Background
+                mDialog.getWindow().setBackgroundDrawableResource(
+                        android.R.color.transparent
+                );
                 table_user.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
